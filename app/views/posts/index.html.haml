@@ -1,0 +1,14 @@
+%h1 Mis posts
+
+%table
+  %tr
+    %th Título
+    %th Texto
+
+  - @posts.each do |post|
+    %tr
+      %td= post.title
+      %td= post.text
+  
+
+= link_to "New posts", new_post_path
