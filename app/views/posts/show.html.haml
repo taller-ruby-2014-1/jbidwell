@@ -5,12 +5,13 @@
   %strong Text:
   = @post.text
 
+%h2 Comentarios
+= render @post.comments
 
 %h2 Agrega un comentario:
 = render "comments/form"
 
-%h2 Comentarios
-= render @post.comments
+
 
 = link_to "Back", posts_path
 = link_to 'Edit', edit_post_path(@post)
